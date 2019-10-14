@@ -1,0 +1,157 @@
+header {
+    width: 100%;
+    height: 40px;
+    background: #333;
+    font-family: '宋体';
+}
+/* ----------------------------------左边顶部----------------------- */
+.left-content {
+    margin-left: 145px;
+    float: left;
+    line-height: 40px;
+}
+.left-content a {
+    color: #fff;
+}
+/* ------------------------------------关注---------------------------- */
+.left-content .follow{
+    float: left;
+}
+.left-content .follow .border-content { 
+    display: none;
+    z-index: 10000;
+    position: absolute;
+    left: 80px;
+    top: 40px;
+    width: 140px;
+    background: #fff;
+}
+.left-content .follow .border-content .border {
+    margin-top: 4px;
+    border: 1px solid #eee;
+}
+.left-content .follow .border-content .border .qr-code {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto 12px;
+    display: block;
+}
+.left-content .follow .border-content .border .title {
+    display: block;
+    margin: 10px 0 18px;
+    line-height: 0;
+    color: #333;
+    text-align: center;
+}
+/* -----------------------------下载app ------------------------*/
+.left-content .app{
+    float: left;
+    margin-left: 20px;
+}
+.left-content .app .border-content {
+    display: none;
+    z-index: 10000;
+    position: absolute;
+    left: 130px;
+    top: 40px;
+    width: 140px;
+    background: #fff;
+}
+.left-content .app .border-content .border {
+    margin-top: 4px;
+    border: 1px solid #eee;
+}
+.left-content .app .border-content .border .qr-code {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto 12px;
+    display: block;
+}
+.left-content .app .border-content .border .title {
+    display: block;
+    margin: 10px 0 18px;
+    line-height: 0;
+    color: #333;
+    text-align: center;
+}
+/* ----------------------------右边顶部-------------------------- */
+.right-content {
+    float: right;
+    margin-right: 92px;
+    height: 40px;
+}
+.right-content a {
+    color: #fff;
+    line-height: 40px;
+}
+.right-content li {
+    float: left;
+}
+/* -------------------------登录注册 ---------------------------*/
+.right-content .login-register {
+    padding-right: 15px;
+}
+/* ---------------------------------收藏--------------------------------- */
+.right-content .collect {
+    padding: 0 15px;
+}
+.collect .top-collect .bg-top_collect {
+    width: 12px;
+    height: 11px;
+    background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -78px -175px;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+/* -------------------------------购物袋-------------------------- */
+.right-content .cart {
+    padding: 0 15px;
+}
+.right-content .cart a i {
+    width: 12px;
+    height: 12px;
+    background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -10px -197px;
+    padding: 4px 18px 0 0;
+    vertical-align: middle;
+}
+/* -------------------------------公告 --------------------------------*/
+.right-content .notice {
+    padding: 0 15px;
+}
+.notice .notice-content {
+    display: none;
+    z-index: 10000;
+    position: absolute;
+    right: 95px;
+    top: 40px;
+    border: #eee 1px solid;
+}
+/* -----------------------------公告栏--------------------------- */
+.notice-content .notice-list {
+    width: 217px;
+    height: 154px;
+    background: #fff;
+    /* border: 1px solid #eee; */
+    margin-top: 4px;
+    padding: 15px 15px 30px 20px;
+}
+.notice-content .notice-list .item {
+    width: 180px;
+    height: 29px;
+    padding-bottom: 8px;
+    line-height: 20px;
+    border-bottom: #eee 1px solid;
+}
+.notice-content .notice-list a{
+    color: #666;
+    height: 29px;
+    display: block;
+    line-height: 29px;
+}
+/* .notice-content .notice-list .item {
+     padding-bottom: 8px; 
+    border-bottom: #eee 1px solid;
+} */
+.notice-content .notice-list .item1 {
+    box-sizing:content-box;
+    padding-top: 10px;
+}

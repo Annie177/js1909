@@ -1,0 +1,439 @@
+/* --------------------------------logo--------------------- */
+#logo .logo-container {
+   position: relative;
+   width: 100%;
+   background: #fff;
+   /* height: 219px; */
+}
+.logo-container .header-logo {
+   width: 98px;
+   height: 168px;
+   margin: 0 auto;
+   padding: 55px 0;
+}
+/* -----------------------------导航栏-------------------------- */
+.logo-container .nav-container {
+   /* margin-top: 50px; */
+   width: 1190px;
+   margin: 0 auto;
+   height: 50px;
+}
+.logo-container .nav-container .nav{
+   width: 1190px;
+   height: 50px;
+}
+.nav-container .nav li {
+   float: left;
+   padding: 0 15px;
+   width: 115px;
+   height: 50px;
+   vertical-align: middle;
+}
+.nav-container .nav li a {
+   font-weight: bold;
+   color: #333;
+   font-size: 20px;
+   line-height: 50px;
+}
+/* -----------------------搜索框 ---------------------*/
+.search-wrap {
+   float: right;
+   margin-top: 20px;
+   margin-left: 80px;
+   /* background: pink; */
+}
+.search-wrap .search {
+   width: 180px;
+   height: 25px;
+   border-bottom: 1px solid #333;
+   padding-bottom: 2px;
+   position: relative;
+}
+.search-wrap .search .text {
+   padding: 0;
+   width: 160px;
+   border: 0px;
+   outline: 0;
+   font-size: 12px;
+   height: 20px;
+}
+
+.bg-Details_page_enlarge {
+   display: inline-block;
+   cursor: pointer;
+   width: 15px;
+   height: 16px;
+   background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -177px -10px;
+   vertical-align: middle;
+}
+/* ---------------------------------下拉菜单-------------------------- */
+#menuwrap {
+   position: absolute;
+   top: 259px;
+   /* top: 0; */
+   left: 0;
+   width: 100%;
+   z-index: 10000;
+}
+
+.menu {
+   display: none;
+   width: 100%;
+   height: 328px;
+   margin: 0;
+   /* background: #fff; */
+   position: absolute;
+   top: 0;
+   padding: 30px 0 70px 0;
+   border-bottom: 3px solid #333;
+}
+
+.menu .menu-border {
+   margin: 0 auto;
+   width: 1190px;
+   height: 225px;
+   margin-left: 179.6px;
+   /* background: yellow; */
+}
+.menu .menu-border li {
+   float: left;
+   height: 225px;
+}
+.menu .menu-border .brand {
+   width: 130px;
+   margin-right: 70px;
+   background: pink;
+}
+.menu .menu-border .hot {
+   width: 79px;
+   margin-left: 70px;
+   margin-right: 70px;
+   background: red;
+}
+.menu .menu-border .xuezi {
+   width: 64px;
+   margin-left: 70px;
+   margin-right: 70px;
+   background: green;
+}
+.menu .menu-border .danxie {
+   width: 130px;
+   margin-left: 70px;
+   margin-right: 70px;
+   background: pink;
+}
+.menu .menu-border .liangxie {
+   width: 64px;
+   margin-left: 70px;
+   margin-right: 70px;
+   background: red;
+}
+
+/* -----------------当前位置---------------- */
+#position {
+   width: 1190px;
+   height: 60px;
+   margin: 0 auto;   
+}
+#position a {
+   line-height: 60px;
+   margin: 3px auto;
+   color: #333;
+}
+/* ------------------商品详情 --------------------*/
+#goods-wrap {
+   width: 1190px;
+   height: 747px;
+   margin: 0 auto;
+   padding: 44px 0 60px;
+   margin: 0 auto;
+   position: relative;
+   z-index: 2;
+}
+/* ---------------左边部分------------- */
+#goods-wrap .left-wrap {
+   width: 605px;
+   height: 605px;
+   float: left;
+   /* background: yellow; */
+}
+/* ------------------商品图片------------- */
+#goods-wrap #goods-img {
+   width: 482px;
+   height: 479px;
+   position: absolute;
+   top: 44px;
+   left: 0;
+   background: red;
+}
+/*------------------小图------------------ */
+.small-box {
+   width: 482px;
+   height: 438px;
+   position: relative;
+   left: 114px;
+   padding-bottom: 41px;
+   
+}
+.small-pic {
+   width: 485px;
+   height: 485px;
+   position: relative;
+   background: pink;
+}
+/* 小放大镜 */
+.small-fdj {
+   position: absolute;
+   width: 225.6px;
+   height: 211.2px;
+   visibility: visible;
+   top: 183.5px;
+   left: 0px;
+   z-index: 10;
+   overflow: hidden;
+   border: 1px solid #eaeaea;
+   background: #999 50% top no-repeat;
+   opacity: .2;
+}
+/* 大放大镜 */
+.big-fdj {
+   width: 470px;
+   height: 440px;
+   display: block;
+   z-index: 100;
+   position: absolute;
+   margin-left: 500px;
+   margin-top: -480px;
+   zoom: 1;
+   background: url(//s1.ygimg.cn/template/common/images/loading.gif?50c5e3e…) #fff no-repeat center center;
+   border: 1px solid #000;
+   display: none;
+   text-align: center;
+   overflow: hidden;
+}
+
+/* ---------------右边部分------------- */
+#goods-wrap .right-wrap {
+   float: left;
+   padding-left: 57px;
+   color: #333;
+   font-family: 'Microsoft YaHei';
+   width: 528px;
+   height: 643px;
+   /* background: pink;  */
+ }
+ /* 品牌logo */
+ #goods-wrap .right-wrap .brand-logo {
+   width: 142px;
+   height: 72px;
+   line-height: 72px;
+   border: 1px solid #f6f6f6;
+   text-align: center;
+ }
+ #goods-wrap .right-wrap .brand-logo img {
+   width: 112px;
+   height: 52px;
+   display: inline-block;
+   vertical-align: middle;
+ }
+ /* 标题 */
+ h1 {
+   font-size: 16px;
+   margin-top: 25px;
+   font-weight: normal;
+ }
+ /* 价格 */
+ #goods-wrap .right-wrap .price-wrap {
+   padding: 4px 0 20px;
+ }
+ .price-wrap .price {
+   margin-top: 40px;
+   font-family: 'Microsoft YaHei';
+   text-align: left;
+ }
+ .now symbol {
+   font-size: 14px;
+}
+#yitianPrice i {
+   font-size: 30px;
+}
+.now {
+   font-weight: bold;
+}
+del {
+   text-decoration: line-through;
+}
+/* 分界线 */
+.summary-line {
+   margin-top: 40px;
+   height: 0;
+   overflow: hidden;
+   border-bottom: 1px dotted #a7a7a7;
+   margin-bottom: 15px;
+}
+#detail-wrap {
+   width: 528px;
+   height: 298px;
+}
+/* 颜色 */
+#detail-wrap .color {
+   width: 528px;
+   height: 49px;
+   margin-top: 20px;
+}
+.color p {
+   float: left;
+}
+.color .box {
+   display: inline-block;
+   width: 400px;
+   height: 49px;
+   margin-left: 2px;
+}
+.color .box a {
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   margin-bottom: 5px;
+   margin-left: 8px;
+   border: 1px solid #ddd;
+   position: relative;
+}
+.color .box a img {
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   vertical-align: middle;
+}
+.picon {
+   width: 14px;
+   height: 14px;
+   background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -177px -46px;
+   display: inline;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   z-index: 20;
+}
+/* 尺码 */
+#detail-wrap .size {
+   width: 528px;
+   height: 64px;
+   margin-top: 35px;
+}
+.size span {
+   float: left;
+}
+.size .size-box {
+   margin-left: 10px;
+   width: 320px;
+   float: left;
+}
+.size .size-box a {
+   border: 1px solid #ccc;
+   min-width: 40px;
+   width: 40px;
+   overflow: visible;
+   height: 20px;
+   line-height: 20px;
+   padding: 0 4px 0 4px;
+   margin-bottom: 10px;
+   display: inline-block;
+   background: #fff;
+   margin-right: 8px;
+   text-align: center;
+   cursor: pointer;
+   color: #666;
+}
+.size .size-table {
+   cursor: pointer;
+   margin-left: 20px;
+   float: left;
+}
+.size .size-table a {
+   color: #666;
+}
+.rule {
+   display: inline-block;
+   width: 12px;
+   height: 12px;
+   background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -46px -174px;
+   padding-right: 5px;
+}
+/* 数量 */
+#detail-wrap .quantity {
+   width: 528px;
+   height: 37px;
+   margin-top: 25px;
+}
+#detail-wrap .quantity span {
+   float: left;
+   height: 30px;
+   line-height: 30px;
+   margin-right: 10px;
+}
+#detail-wrap .quantity .input-num {
+   float: left;
+}
+.input-num .num {
+   width: 60px;
+   height: 30px;
+   font-size: 14px;
+   color: #666;
+   border: 1px solid #ddd;
+   margin-top: 3px;
+}
+#detail-wrap .quantity .change {
+   float: left;
+   margin-left: 4px;
+   padding-top: 3px;
+}
+#detail-wrap .quantity .change a {
+   display: block;
+   width: 18px;
+   height: 14px;
+   margin-bottom: 3px;
+   color: #666;
+}
+#detail-wrap .quantity .change .up {
+   width: 18px;
+   height: 14px;
+   display: inline-block;
+   background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -119px -104px;
+}
+#detail-wrap .quantity .change .down {
+   width: 18px;
+   height: 14px;
+   display: inline-block;
+   background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -86px -140px;;
+}
+/* 按钮 */
+#detail-wrap .button {
+   margin-top: 30px;
+   width: 528px;
+   height: 48px;
+}
+#detail-wrap .button li {
+   float: left;
+   width: 244px;
+   height: 48px;
+}
+#detail-wrap .button li a {
+   display: inline-block;
+   width: 222px;
+   height: 46px;
+   line-height: 46px;
+   font-size: 20px;
+   margin-right: 20px;
+   border: 1px solid #333;
+   text-align: center;
+}
+.btn-left {
+   color: #fff;
+   background: #333;
+}
+.btn-right {
+   color: #333;
+}
+
+
