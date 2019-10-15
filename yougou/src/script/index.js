@@ -1,9 +1,9 @@
 //下拉菜单效果
-!function(){
-    $('.nav .item').hover(function(){
-    $('.menu').show();
-    },function(){
-    $('.menu').hide();
+!function () {
+    $('.nav .item').hover(function () {
+        $('.menu').show();
+    }, function () {
+        $('.menu').hide();
     })
 }();
 
@@ -47,63 +47,58 @@
 
 
 //楼梯效果--------------------------------------------------
-class louti {
-    constructor() {
-        this.loutinav = $('#loutinav');
-        this.loutili = $('#loutinav li').not('.last_');
-        this.louceng = $('section .louceng');
-        this.last = $('.last_');
+
+!function () {
+    let $loutinav = $('#loutinav');
+    let $loutili = $('#loutinav li').not('.last_');
+    let $louceng = $('section .louceng');
+    let $last = $('.last_');
+
+    let $top = $(window).scrollTop();
+    if ($top >= 750) {
+        $loutinav.show();
     }
-    init() {
-        let _this = this;
-        let $top = $(window).scrollTop();
+    else {
+        $loutinav.hide();
+    }
+    // 1,显示侧边栏
+    $(window).on('scroll', function () {
+        let $top = $(this).scrollTop();
         if ($top >= 750) {
-            _this.loutinav.show();
+            $loutinav.show();
         }
         else {
-            _this.loutinav.hide();
+            $loutinav.hide();
         }
-        // 1,显示侧边栏
-        $(window).on('scroll', function () {
-            let $top = $(this).scrollTop();
-            if ($top >= 750) {
-                _this.loutinav.show();
+        // 4, 侧边栏和内容相对应
+        $louceng.each(function (index, element) {
+            let $loucengtop = $louceng.eq(index).offset().top + $(element).height() / 2;
+            if ($loucengtop > $top) {
+                $loutili.removeClass('active_');
+                $loutili.eq(index).addClass('active_');
+                return false;
             }
-            else {
-                _this.loutinav.hide();
-            }
-
-            // 4, 侧边栏和内容相对应
-            _this.louceng.each(function (index, element) {
-                let $loucengtop = _this.louceng.eq(index).offset().top + $(element).height() / 2;
-                if ($loucengtop > $top) {
-                    _this.loutili.removeClass('active_');
-                    _this.loutili.eq(index).addClass('active_');
-                    return false;
-                }
-            })
-
-        });
-        // 2,点击侧边栏显示对应的内容
-        this.loutili.on('click', function () {
-            $(this).addClass('active_').siblings('li').removeClass('active_');
-            //获取每一层楼层的高
-            let $loucengtop = _this.louceng.eq($(this).index()).offset().top;
-            $('html,body').animate({
-                scrollTop: $loucengtop
-            })
-        });
-
-        // 3, 回到顶部
-        this.last.on('click', function () {
-            $('html,body').animate({
-                scrollTop: 0
-            })
-        });
-
-    }
-}
-new louti().init();
+        })
+    })
+    // 2,点击侧边栏显示对应的内容
+    $loutili.on('click', function () {
+        //$(window).off('scroll');
+        $(this).addClass('active_').siblings('li').removeClass('active_');
+        //获取每一层楼层的高
+        let $loucengtop = $louceng.eq($(this).index()).offset().top;
+        $('html,body').animate({
+            scrollTop: $loucengtop
+        })
+        // 关闭滚轮事件
+    
+    });
+    // 3, 回到顶部
+    $last.on('click', function () {
+        $('html,body').animate({
+            scrollTop: 0
+        })
+    });
+}();
 
 
 //海报图切换-------------------------------------------------
@@ -126,7 +121,7 @@ new louti().init();
     }, function () {
         $('#left').hide();
         $('#right').hide();
-         //鼠标移开继续打开定时器
+        //鼠标移开继续打开定时器
         timer = setInterval(function () {
             index++;
             if (index > $('#banner-wrap ul li').length - 1) {
@@ -134,29 +129,10 @@ new louti().init();
             }
             $('#banner-wrap ul li').eq(index).addClass('active').siblings().removeClass('active');
             $('#banner-wrap div').eq(index).show().siblings('#banner-wrap div').hide();
-        }, 2000)
+        }, 4000)
 
     })
 
-
-    //点击箭头切换图片
-    $('#right').on('click', function () {
-        index++;
-        if (index > $('#banner-wrap ul li').length - 1) {
-            index = 0;
-        }
-        $('#banner-wrap ul li').eq(index).addClass('active').siblings().removeClass('active');
-        $('#banner-wrap div').eq(index).show().siblings('#banner-wrap div').hide();
-
-    })
-    $('#left').on('click', function () {
-        index--;
-        if (index < 0) {
-            index = $('#banner-wrap ul li').length - 1;
-        }
-        $('#banner-wrap ul li').eq(index).addClass('active').siblings().removeClass('active');
-        $('#banner-wrap div').eq(index).show().siblings('#banner-wrap div').hide();
-    })
     //设置定时器图片自动轮播
     timer = setInterval(function () {
         index++;
@@ -165,7 +141,7 @@ new louti().init();
         }
         $('#banner-wrap ul li').eq(index).addClass('active').siblings().removeClass('active');
         $('#banner-wrap div').eq(index).show().siblings('#banner-wrap div').hide();
-    }, 2000)
+    }, 4000)
 }();
 
 
@@ -174,13 +150,13 @@ new louti().init();
 
     $('.arrowright').on('click', function () {
         $('.list-container-wrap').animate({
-            left:-920,
+            left: -920,
         })
 
     })
     $('.arrowleft').on('click', function () {
         $('.list-container-wrap').animate({
-            left:0,
+            left: 0,
         })
     })
 
@@ -190,40 +166,37 @@ new louti().init();
 !function () {
     $('.arrowright_2').on('click', function () {
         $('.logo-container_1').animate({
-            left:-820,
+            left: -820,
         })
 
     })
     $('.arrowleft_1').on('click', function () {
         $('.logo-container_1').animate({
-            left:0,
+            left: 0,
         })
     })
 }();
 
 //最新产品发布鼠标移入加背景颜色 
-!function(){
-    $('list-container-wrap li').hover(function(){
+!function () {
+    $('list-container-wrap li').hover(function () {
         $('.list-container-wrap li').css({
-            background:"rgb(247, 245, 245)",
+            background: "rgb(247, 245, 245)",
         })
-    },function(){
+    }, function () {
         $('.list-container-wrap li').css({
-            background:"white",
+            background: "white",
         })
     })
 }();
 
 
-
-
-
 //今日主推大牌遮罩效果
-!function(){
-    $('.brand-pic').on('mouseover','li',function(ev){
+!function () {
+    $('.brand-pic').on('mouseover', 'li', function (ev) {
         $('.hover_hide').eq($(this).index('.brand-pic li')).show();
     })
-    $('.brand-pic').on('mouseout','li',function(ev){
+    $('.brand-pic').on('mouseout', 'li', function (ev) {
         $('.hover_hide').eq($(this).index('.brand-pic li')).hide();
     })
 }();
@@ -231,11 +204,30 @@ new louti().init();
 
 
 //品牌潮流资讯遮罩效果
-!function(){
-    $('#small-pic').on('mouseover','li',function(ev){
+!function () {
+    $('#small-pic').on('mouseover', 'li', function (ev) {
         $('.hover-hide').eq($(this).index('#small-pic li')).show();
     })
-    $('#small-pic').on('mouseout','li',function(ev){
+    $('#small-pic').on('mouseout', 'li', function (ev) {
         $('.hover-hide').eq($(this).index('#small-pic li')).hide();
     })
 }();
+
+
+//2.懒加载
+//2.1添加lazy类
+//2.2真实的图片路径添加到data-original
+//2.3设置图片的宽高
+
+// $(function () { //页面加载完成
+//     $("img.lazy").lazyload({
+//         effect: "fadeIn" //效果方式
+//     });
+// });
+
+// <img class="lazy" data-original="img/bmw_m1_hood.jpg" width="765" height="574" alt="BMW M1 Hood">
+// <img class="lazy" data-original="img/bmw_m1_side.jpg" width="765" height="574" alt="BMW M1 Side">
+// <img class="lazy" data-original="img/viper_1.jpg" width="765" height="574" alt="Viper 1">
+// <img class="lazy" data-original="img/viper_corner.jpg" width="765" height="574" alt="Viper Corner">
+// <img class="lazy" data-original="img/bmw_m3_gt.jpg" width="765" height="574" alt="BMW M3 GT">
+// <img class="lazy" data-original="img/corvette_pitstop.jpg" width="765" height="574" alt="Corvette Pitstop"></img>

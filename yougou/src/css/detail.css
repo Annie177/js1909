@@ -1,8 +1,9 @@
 /* --------------------------------logo--------------------- */
-#logo .logo-container {
+#logo {
    position: relative;
    width: 100%;
    background: #fff;
+   border-bottom: 1px solid #ccc;
    /* height: 219px; */
 }
 .logo-container .header-logo {
@@ -17,6 +18,7 @@
    width: 1190px;
    margin: 0 auto;
    height: 50px;
+   
 }
 .logo-container .nav-container .nav{
    width: 1190px;
@@ -38,7 +40,7 @@
 /* -----------------------搜索框 ---------------------*/
 .search-wrap {
    float: right;
-   margin-top: 20px;
+   margin-top: 14px;
    margin-left: 80px;
    /* background: pink; */
 }
@@ -69,11 +71,11 @@
 /* ---------------------------------下拉菜单-------------------------- */
 #menuwrap {
    position: absolute;
-   top: 259px;
-   /* top: 0; */
+   top: 230px;
    left: 0;
    width: 100%;
    z-index: 10000;
+ 
 }
 
 .menu {
@@ -81,11 +83,12 @@
    width: 100%;
    height: 328px;
    margin: 0;
-   /* background: #fff; */
    position: absolute;
    top: 0;
    padding: 30px 0 70px 0;
    border-bottom: 3px solid #333;
+   background: #fff;
+   z-index: 100;
 }
 
 .menu .menu-border {
@@ -93,40 +96,44 @@
    width: 1190px;
    height: 225px;
    margin-left: 179.6px;
+
    /* background: yellow; */
 }
-.menu .menu-border li {
+
+.menu .menu-border .menu-brand {
    float: left;
    height: 225px;
 }
-.menu .menu-border .brand {
+
+.menu .menu-border .menu-brand {
    width: 130px;
-   margin-right: 70px;
-   background: pink;
+   margin-right: 60px;
+   /* background: pink; */
+   position: relative;
 }
-.menu .menu-border .hot {
-   width: 79px;
-   margin-left: 70px;
-   margin-right: 70px;
-   background: red;
+
+.menu-brand .pinpai a {
+   font-size: 16px;
+   color: #333;
+   font-weight: bold;
+   
 }
-.menu .menu-border .xuezi {
-   width: 64px;
-   margin-left: 70px;
-   margin-right: 70px;
-   background: green;
+/* 下拉菜单品牌名字 */
+.menu-brand .pinpai ul li a {
+   font-size: 12px;
+   
 }
-.menu .menu-border .danxie {
-   width: 130px;
-   margin-left: 70px;
-   margin-right: 70px;
-   background: pink;
+.menu-brand .pinpai-left {
+   float: left;
+   overflow: hidden;
+   height: 200px;
 }
-.menu .menu-border .liangxie {
-   width: 64px;
-   margin-left: 70px;
-   margin-right: 70px;
-   background: red;
+.menu-brand .pinpai li {
+   display: inline-block;
+   width: 60px;
+   height: 20px;
+   margin-top: 12px;
+   text-align: left;
 }
 
 /* -----------------当前位置---------------- */
@@ -164,7 +171,7 @@
    position: absolute;
    top: 44px;
    left: 0;
-   background: red;
+   /* background: red; */
 }
 /*------------------小图------------------ */
 .small-box {
@@ -175,44 +182,84 @@
    padding-bottom: 41px;
    
 }
-.small-pic {
+.small-box .small-pic {
+   position: relative;
    width: 485px;
    height: 485px;
-   position: relative;
-   background: pink;
 }
-/* 小放大镜 */
-.small-fdj {
+/* -----------小图----------- */
+#smallpic {
+   width: 485px;
+   height: 485px;
    position: absolute;
-   width: 225.6px;
-   height: 211.2px;
-   visibility: visible;
-   top: 183.5px;
-   left: 0px;
+   
+   /* position: relative; */
+}
+/* ------------小放大镜-------- */
+#sfdj {
+   position: absolute;
+   display: none;
    z-index: 10;
    overflow: hidden;
    border: 1px solid #eaeaea;
    background: #999 50% top no-repeat;
    opacity: .2;
 }
-/* 大放大镜 */
-.big-fdj {
+/* -------------大放大镜 ----------*/
+#bfdj {
    width: 470px;
    height: 440px;
-   display: block;
-   z-index: 100;
-   position: absolute;
-   margin-left: 500px;
-   margin-top: -480px;
-   zoom: 1;
-   background: url(//s1.ygimg.cn/template/common/images/loading.gif?50c5e3e…) #fff no-repeat center center;
-   border: 1px solid #000;
    display: none;
+   z-index: 100;
+   /* position: absolute; */
+   position: relative;
+   margin-left: 580px;
+   margin-top: -450px;
+   zoom: 1;
+   border: 1px solid #000;
    text-align: center;
    overflow: hidden;
 }
+/* ---------------大图-------------- */
+#bigpic {
+   z-index: 200;
+   width: 1000px;
+   height: 1000px;
+   position: absolute;
+   /* vertical-align: middle; */
+   /* margin-left: -290px; */
+   /* margin-top: -290px */
+}
 
-/* ---------------右边部分------------- */
+/* ---------------------放大放大镜------------------------- */
+
+/*------------------------侧边小图----------------------------- */
+.smaller-box {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 497px;
+   width: 75px;
+   overflow: hidden;
+   
+}
+/* 图片列表 */
+.smaller-box li {
+   width: 66px;
+   height: 66px;
+   margin-top: 5px;
+   border: 1px solid #ccc;
+}
+.smaller-box li img {
+   width: 100%;
+   height: 100%;
+}
+
+.smaller-box .hover_ {
+   border: 1px solid black;
+}
+
+/* ---------------------------右边部分------------------------- */
 #goods-wrap .right-wrap {
    float: left;
    padding-left: 57px;
@@ -275,7 +322,7 @@ del {
    width: 528px;
    height: 298px;
 }
-/* 颜色 */
+/* -----------------------颜色--------------------- */
 #detail-wrap .color {
    width: 528px;
    height: 49px;
@@ -292,13 +339,17 @@ del {
 }
 .color .box a {
    display: inline-block;
-   width: 40px;
-   height: 40px;
+   width: 42px;
+   height: 42px;
    margin-bottom: 5px;
    margin-left: 8px;
    border: 1px solid #ddd;
    position: relative;
 }
+.color .box .border_hover {
+   border: 1px solid black;
+}
+
 .color .box a img {
    display: inline-block;
    width: 40px;
@@ -315,7 +366,7 @@ del {
    bottom: 0;
    z-index: 20;
 }
-/* 尺码 */
+/* -----------------------------尺码---------------------- */
 #detail-wrap .size {
    width: 528px;
    height: 64px;
@@ -344,6 +395,20 @@ del {
    text-align: center;
    cursor: pointer;
    color: #666;
+   position: relative;
+}
+.size .size-box .size_hover {
+   border: 1px solid black;
+}
+.size_select {
+   width: 14px;
+   height: 14px;
+   background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -177px -46px;
+   display: inline;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   z-index: 20;
 }
 .size .size-table {
    cursor: pointer;

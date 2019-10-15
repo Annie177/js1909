@@ -220,10 +220,10 @@
 /* 按钮 */
 #banner-wrap ul li {
     float: left;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 5px;
     background: #ccc;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     margin-right: 5px;
     text-indent: -999em;
     cursor: pointer;
