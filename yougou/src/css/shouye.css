@@ -633,6 +633,11 @@
     /* border: 1px solid black; */
     position: relative;
 }
+#small-pic li img {
+    width: 100%;
+    height: 100%;
+}
+
 
 /* 黑色遮罩 */
 #small-pic li .hover-hide {

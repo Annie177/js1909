@@ -90,6 +90,7 @@
             scrollTop: $loucengtop
         })
         // 关闭滚轮事件
+        //$(window).off('scroll');
     
     });
     // 3, 回到顶部

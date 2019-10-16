@@ -47,7 +47,7 @@
             <ul class="cart-list">
                 <li style=width:60px;>
                     <label for="" class="choose">
-                        <input type="checkbox" checked="checked">
+                        <input type="checkbox" class="allselect">
                         <!-- <i class="checked"></i> -->
                         全选</label>
                 </li>
@@ -61,90 +61,10 @@
                 <li style=width:118px;>操作</li>
             </ul>
             <!-- 详细信息 -->
-            <ul class="cart_">
-                <li class="li_1">
-                    <input type="checkbox" checked="checked">
-                </li>
-                <!-- 图片 -->
-                <li class="li_2">
-                    <a href="">
-                        <img src="https://i2.ygimg.cn/pics/belle/2019/101297812/101297812_01_t.jpg?10" alt="">
-                    </a>
-                </li>
-                <!-- 标题 -->
-                <li class="li_3">
-                    <a href="" class="cart-title">Belle/百丽2019冬新款摔纹牛皮革女马丁皮靴90321DD9</a>
-                </li>
-                <!-- 颜色尺码 -->
-                <li class="li_4">
-                    <div style="padding-left: 20px;">
-                        <p class="p_1">颜色：
-                            <i>黑单里</i>
-                        </p>
-                        <p class="p_1">尺码：
-                            <i>36</i>
-                        </p>
-                    </div>
-                </li>
-                <!-- 价格 -->
-                <li class="li_5">798</li>
-                <!-- 数量 -->
-                <li class="li_6">
-                    <a href="" class="li_6_1">-</a>
-                    <input type="text" class="li_6_3">
-                    <a href="" class="li_6_2">+</a>
-
-                </li>
-                <li class="li_7">
-                    <strong>798</strong>
-                </li>
-                <li class="li_8">
-                    <a href="">移入收藏夹</a><br>
-                    <a href="">删除</a>
-                </li>
-            </ul>
-            <ul class="cart_">
-                <li class="li_1">
-                    <input type="checkbox" checked="checked">
-                </li>
-                <!-- 图片 -->
-                <li class="li_2">
-                    <a href="">
-                        <img src="https://i2.ygimg.cn/pics/belle/2019/101297812/101297812_01_t.jpg?10" alt="">
-                    </a>
-                </li>
-                <!-- 标题 -->
-                <li class="li_3">
-                    <a href="" class="cart-title">Belle/百丽2019冬新款摔纹牛皮革女马丁皮靴90321DD9</a>
-                </li>
-                <!-- 颜色尺码 -->
-                <li class="li_4">
-                    <div style="padding-left: 20px;">
-                        <p class="p_1">颜色：
-                            <i>黑单里</i>
-                        </p>
-                        <p class="p_1">尺码：
-                            <i>36</i>
-                        </p>
-                    </div>
-                </li>
-                <!-- 价格 -->
-                <li class="li_5">798</li>
-                <!-- 数量 -->
-                <li class="li_6">
-                    <a href="" class="li_6_1">-</a>
-                    <input type="text" class="li_6_3">
-                    <a href="" class="li_6_2">+</a>
-
-                </li>
-                <li class="li_7">
-                    <strong>798</strong>
-                </li>
-                <li class="li_8">
-                    <a href="">移入收藏夹</a><br>
-                    <a href="">删除</a>
-                </li>
-            </ul>
+           <div class="cart_warp">
+               
+           </div>
+            
           
             
         </div>
@@ -153,7 +73,7 @@
         <ul class="delete">
             <li class="delete_1">
                 <label for="">
-                    <input type="checkbox"checked="checked">
+                    <input type="checkbox">
                 全选</label>
             </li>
             <li class="delete_2">
@@ -194,9 +114,11 @@
     </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script>
      $('header').load('head.html');
     </script>
+    <script src="script/cart.js"></script>
 
 </body>
 

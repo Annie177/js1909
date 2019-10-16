@@ -31,7 +31,7 @@
         let $bili = $bpic.height() / $spic.height();
         //鼠标移动效果
         $(this).on('mousemove', function (ev) {
-             var ev = ev || window.event;
+            var ev = ev || window.event;
             let $l = ev.pageX - $(this).offset().left - ($sf.width() / 2);
             let $t = ev.pageY - $(this).offset().top - ($sf.height() / 2);
             if ($l <= 0) {
@@ -41,8 +41,8 @@
             }
             if ($t <= 0) {
                 $t = 0;
-            } else if ($t >=  $(this).height() - $sf.height()) {
-                $t =  $(this).height() - $sf.height();
+            } else if ($t >= $(this).height() - $sf.height()) {
+                $t = $(this).height() - $sf.height();
             }
 
             $sf.css({
@@ -53,7 +53,7 @@
             $bpic.css({
                 "top": -$bili * $t,
                 "left": -$bili * $l
-                
+
             })
         })
     });
@@ -74,6 +74,42 @@
 
 
 //颜色勾选效果
-!function(){
+!function () {
 
 }();
+
+//点击加入购物袋
+!function () {
+    let sid = location.search.substring(1).split('=')[1];
+    let sidarr = [];
+    let numarr = [];
+    if ($.cookie('cookiesid') && $.cookie('cookienum')) {
+        sidarr = $.cookie('cookiesid').split(',');
+        numarr = $.cookie('cookienum').split(',');
+    }
+
+    $('.btn-left').on('click', function () {
+        alert('已加入购物车');
+       
+        if (sidarr.indexOf(sid)!=-1) {
+            let index=sidarr.indexOf(sid);
+            numarr[index] = parseInt(numarr[index]) + parseInt($('.input-num').find('input').val());
+            $.cookie('cookienum', numarr.toString(), { expires: 10 });
+        }
+        else {
+            sidarr.push(sid);
+            $.cookie('cookiesid', sidarr.toString(), { expires: 10 });
+            numarr.push($('.input-num').find('input').val());
+            $.cookie('cookienum', numarr.toString(), { expires: 10 });
+            console.log(sidarr);
+            console.log(numarr);
+
+        }
+    })
+}();
+
+
+
+
+
+

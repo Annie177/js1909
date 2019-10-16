@@ -22,7 +22,7 @@ $.ajax({
         strhtml += `
             <div style="float:left;width:230px;">
                     <div class="img-wrap">
-                    <a target="_blank" href="#" title="">
+                    <a target="_blank" href="http://10.31.155.64/javascript-1909/yougou/src/detail.html?sid=${value.sid}" title="">
                         <img src="${value.url}"  alt="">
                     </a>
                 </div>

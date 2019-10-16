@@ -47,7 +47,7 @@
 }
 .register_wrap .wrap_border {
     width: 378px;
-    height: 530px;
+    height: 500px;
     margin-top: 12px;
     background: #fff;
     overflow: hidden;  
@@ -103,7 +103,9 @@
     height: 38px;
     
 }
-
+/* .num-wrap .p2 {
+    text-align: center;
+} */
 .num_ .label-1 {
     font-size: 12px;
     height: 38px;
@@ -160,10 +162,11 @@
     padding: 0;
 }
 .yzm-wrap-1 .random-yzm {
-    width: 110px;
-    height: 40px;
+    width: 100px;
+    height: 38px;
     margin-right: 17px;
     float: right;
+    border: 1px solid black;
 }
 .yzm-wrap .yzm-wrap-2 {
     width: 330px;
