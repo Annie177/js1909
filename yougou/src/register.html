@@ -31,7 +31,7 @@
         </div>
     </div>
     <!-- -----------------------海报图------------------------ -->
-    <form action="">
+    <form action="http://10.31.155.64/javascript-1909/yougou/php/register.php" method="post" id="form1">
         <div id="banner-wrap">
             <a href="" class="banner"></a>
             <div class="register_wrap">
@@ -47,7 +47,7 @@
                             <div class="p1">
                                 <div class="num_">
                                     <label class="label-1"><span>手机号</span></label>
-                                    <input type="text" class="mobile" placeholder="请输入您的手机号码" />
+                                    <input type="text" class="mobile" name="mobile" placeholder="请输入您的手机号码" />
                                 </div>
                             </div>
                             <div class="p2"></div>
@@ -96,7 +96,7 @@
                             <div class="comfirm-wrap-1">
                                 <div class="comfirmcode">
                                     <label class="label-5"><span>确认密码</span></label>
-                                    <input type="password" class="comfirm-num" />
+                                    <input type="password" name="password" class="comfirm-num" />
                                 </div>
                             </div>
                             <div class="comfirm-2"></div>
@@ -110,8 +110,8 @@
                         </div>
                         <!-- 确认并注册 -->
                         <div class="bottom">
-                            <a href="" class="label-6">
-                                <input type="submit" value="确认并注册" class="submit">
+                            <a href="javascript:;" class="label-6">
+                                <input type="submit" value="确认并注册" class="submit" name="submit">
                             </a>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
         $('header').load('head.html');
        </script>
 
-    <script src="script/registry1.js"></script>
+    <script src="script/registry.js"></script>
    
 </body>
 

@@ -108,6 +108,22 @@
     })
 }();
 
+// !function(){
+//     // 加减       
+//     $('.up').on('click',function(){
+       
+//         var num = $(this).siblings(".num").val();
+//         num--;
+//         $(this).siblings(".num").val(num);
+//     });
+//     $('.down').on('click',function(){
+        
+//         var num = $(this).siblings(".num").val();
+//         num++;
+//         $(this).siblings(".num").val(num);
+//     })
+// }();
+
 
 
 

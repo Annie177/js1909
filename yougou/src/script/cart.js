@@ -39,13 +39,13 @@
                 <li class="li_5">${arrdata[i].price}</li>
                 <!-- 数量 -->
                 <li class="li_6">
-                    <a href="" class="li_6_1">-</a>
+                    <a href="javascript:;"class="li_6_1">-</a>
                     <input type="text" class="li_6_3" value="${num}">
-                    <a href="" class="li_6_2">+</a>
+                    <a href="javascript:;" class="li_6_2">+</a>
 
                 </li>
                 <li class="li_7">
-                    <strong>${arrdata[i].price * num}</strong>
+                    <strong class="totalprice">${arrdata[i].price * num}</strong>
                 </li>
                 <li class="li_8">
                     <a href="">移入收藏夹</a><br>
@@ -79,6 +79,22 @@
 
                         }
                     })
+                    // 加减       
+                    $('.li_6_1').on('click',function(){
+                        console.log($('.li_6_1'))
+                        var num = $(this).siblings(".li_6_3").val();
+                        num--;
+                        $(this).siblings(".li_6_3").val(num);
+                    });
+                    $('.li_6_2').on('click',function(){
+                        
+                        var num = $(this).siblings(".li_6_3").val();
+                        num++;
+                        $(this).siblings(".li_6_3").val(num);
+                    });
+                    //总价
+                    
+                    
                 }
 
             }

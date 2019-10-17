@@ -44,14 +44,14 @@
                     <li class="btn-2"><a href="#">手机号快捷登录</a></li>
                 </ul>
                 <!-- 账号密码登录框 -->
-                <div class="form_">
-                    <form action="" class="form-wrap">
+                <div class="form_ show">
+                   
                         <!-- 账号 -->
                         <div class="num-wrap">
                             <div class="p1">
                                 <div class="num_">
                                     <i class="icon-1"></i>
-                                    <input type="text" class="mobile" placeholder="手机号/会员名称/邮箱" />
+                                    <input type="text" id="mobile" placeholder="手机号/会员名称/邮箱" />
                                 </div>
                             </div>
                             <div class="p2"></div>
@@ -63,7 +63,7 @@
                             <div class="password-wrap-1">
                                 <div class="passwordcode">
                                     <i class="icon-2"></i>
-                                    <input type="password" class="password-num" placeholder="请输入密码" />
+                                    <input type="password" id="password-num" placeholder="请输入密码" />
                                 </div>
                             </div>
                             <div class="password-wrap-2"></div>
@@ -75,54 +75,10 @@
 
                         <!-- 点击登录 -->
                         <div class="bottom">
-                            <a href="">
-                                <input type="submit" value="点击登录" class="submit">
-                            </a>
-                        </div>
-                        <!-- 其他 -->
-                        <p class="other">使用合作网站账号登录优购：</p>
-                        <p class="app">
-                            <a href="" class="a1"></a> | <a href="" class="a2"></a> | <a href="" class="a3"></a> | <a
-                                href="" class="a4"></a> | <a href="" class="a5"></a>
-                        </p>
-                    </form>
-                </div>
-                <!-- 手机号快捷登录 -->
-                <div class="form_ show">
-                    <form action="" class="form-wrap">
-                        <!-- 手机号 -->
-                        <div class="num-wrap">
-                            <div class="p1">
-                                <div class="num_">
-                                    <label class="label-1"><span>手机号</span></label>
-                                    <input type="text" class="mobile" placeholder="请输入您的手机号码" />
-                                </div>
-                            </div>
-                            <div class="p2"></div>
-                        </div>
-
-
-                        <!-- 短信验证 -->
-                        <div class="mobilecode-wrap">
-                            <div class="mobilecode-wrap-1">
-                                <div class="mobilecode">
-                                    <label class="label-3"><span>短信验证码</span></label>
-                                    <input type="text" class="mobilecode-num" />
-                                </div>
-                                <div class="get-mobilecode">
-                                    <a href="" class="get-bg">
-                                        <span>获取验证码</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="mobilecode-wrap-2"></div>
-                        </div>
-
-                        <!-- 点击登录 -->
-                        <div class="bottom">
-                            <a href="">
-                                <input type="submit" value="点击登录" class="submit">
-                            </a>
+                                <!-- <input type="button" value="登录" id="submit"> -->
+                            
+                                <button id="submit">点击登录</button>
+                           
                         </div>
                         <!-- 其他 -->
                         <p class="other">使用合作网站账号登录优购：</p>
@@ -130,8 +86,10 @@
                             <a href="" class="a1"></a> | <a href="" class="a2"></a> | <a href="" class="a3"></a> | <a
                                 href="" class="a4"></a> | <a href="" class="a5"></a>
                         </p>
-                    </form>
+                   
                 </div>
+                <!-- 手机号快捷登录 -->
+                
 
             </div>
         </div>
@@ -143,9 +101,11 @@
             增值电信业务经营许可证：<a href="" target="_blank">粤 B2-20090203</a></p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script>
         $('header').load('head.html');
     </script>
+    <script src="script/login.js"></script>
 
 </body>
 
