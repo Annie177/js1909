@@ -1,0 +1,1 @@
+"use strict";require(["detail","detailrander","header"]);

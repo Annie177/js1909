@@ -12,6 +12,11 @@
     height: 50px;
     background: url(https://pcs2.ygimg.cn/template/common/images/logo.jpg?bf701d76899056f1c76928124aa7f2a7) no-repeat left top;
 }
+.logo a {
+    display: block;
+    width: 355px;
+    height: 50px;
+}
 .order-title {
     width: 600px;
     height: 20px;

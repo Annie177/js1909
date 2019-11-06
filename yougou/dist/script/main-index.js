@@ -1,0 +1,1 @@
+"use strict";require(["index","indexrander","header"]);

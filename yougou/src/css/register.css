@@ -127,6 +127,7 @@
 .form_ .num-wrap .p2 {
     width: 330px;
     height: 28px;
+    line-height: 28px;
 }
 /* 验证码 */
 .yzm-wrap {
@@ -143,6 +144,7 @@
     height: 38px;
     border: 1px solid #e3e2e2;
     float: left;
+    
 }
 .yzm .label-2 {
     font-size: 12px;
@@ -167,10 +169,13 @@
     margin-right: 17px;
     float: right;
     border: 1px solid #e3e2e2;
+    line-height: 38px;
+    text-align: center;
 }
 .yzm-wrap .yzm-wrap-2 {
     width: 330px;
     height: 28px;
+    line-height: 28px;
 }
 /* 短信验证 */
 .mobilecode-wrap {
@@ -236,6 +241,7 @@
 .password-wrap-2 {
     width: 330px;
     height: 28px;
+    line-height: 28px;
 }
 .passwordcode {
     width: 313px;
@@ -272,6 +278,7 @@
 .comfirm-wrap-2 {
     width: 330px;
     height: 28px;
+    line-height: 28px;
 }
 .comfirmcode {
     width: 313px;

@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/cart.css"> 
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="script/require.config.js" id="current-page" target-module="script/cart.js" defer async="true" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" defer async="true"
+    data-main="script/main-cart.js"></script>
 </head>
 
 <body>
@@ -22,9 +24,9 @@
     </header>
     <div id="logo-wrap">
         <!-- logo -->
-        <h1 class="logo">
-            <a href=""></a>
-        </h1>
+        <div class="logo">
+            <a href="http://10.31.155.64/javascript-1909/yougou/src/index.html"></a> 
+        </div>
         <!-- 订单标题 -->
         <ul class="order-title">
             <li class="first-li">我的购物袋
@@ -47,7 +49,7 @@
             <ul class="cart-list">
                 <li style=width:60px;>
                     <label for="" class="choose">
-                        <input type="checkbox" class="allselect">
+                        <input type="checkbox" class="allselect" checked>
                         <!-- <i class="checked"></i> -->
                         全选</label>
                 </li>
@@ -73,7 +75,7 @@
         <ul class="delete">
             <li class="delete_1">
                 <label for="">
-                    <input type="checkbox">
+                    <input type="checkbox" checked>
                 全选</label>
             </li>
             <li class="delete_2">
@@ -95,7 +97,7 @@
             </ul>
             <div class="right-1">
                 <strong>总计 (不含运费)</strong>：<strong style="font-size: 16px">￥</strong><strong
-                    style="font-size: 20px" class="finally">798</strong>
+                    style="font-size: 20px" class="finally"></strong>
                 <a href="" class="btn-js">结算</a>
             </div>
         </div>
@@ -114,11 +116,12 @@
     </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> -->
     <script>
      $('header').load('head.html');
     </script>
-    <script src="script/cart.js"></script>
+    <!-- <script src="script/cart.js"></script> -->
+    
 
 </body>
 

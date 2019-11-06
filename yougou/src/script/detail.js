@@ -1,13 +1,6 @@
-//下拉菜单效果
-!function () {
-    $('.nav .item').hover(function () {
-        $('.menu').show();
-    }, function () {
-        $('.menu').hide();
-    })
-}();
-
-// 侧边小图鼠标经过效果
+require(['config'], function () {
+    require(['jquery', 'jqcookie'], function () {
+         // 侧边小图鼠标经过效果
 !function () {
     $('.smaller-box').on('mouseover', 'li', function (ev) {
         $('.smaller-box li').eq($(this).index()).addClass('hover_').siblings().removeClass('hover_');
@@ -108,24 +101,13 @@
     })
 }();
 
-// !function(){
-//     // 加减       
-//     $('.up').on('click',function(){
-       
-//         var num = $(this).siblings(".num").val();
-//         num--;
-//         $(this).siblings(".num").val(num);
-//     });
-//     $('.down').on('click',function(){
-        
-//         var num = $(this).siblings(".num").val();
-//         num++;
-//         $(this).siblings(".num").val(num);
-//     })
-// }();
 
 
 
+
+
+    })
+})
 
 
 
